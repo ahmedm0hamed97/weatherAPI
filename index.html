@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./bootstrap-icons-1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+
+<!-- nav -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center flex-wrap" href="#">
+        <img src="./images/logo@2x.png" class="logo-img me-2" alt="site logo">
+        <div class="logo ">
+            <h1 class="logo-title fw-bold mb-0 ">Weather</h1>
+            <p class="logo-desc mb-0">tagline goes here</p>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-menu-button fw-bold"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+        <ul class="nav nav-pills nav-fill gap-2 p-2 rounded-5 shadow-sm fw-semibold mt-2" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-dark); --bs-nav-pills-link-active-bg: var(--bs-white) ;">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">News</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Live cameras</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Photo</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Contact</button>
+            </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+
+<section class="main ">
+  <div class="container py-5">
+    <input id="search" type="text" class="bg-dark w-100 rounded-pill p-3 my-5 " placeholder="Find your location....">
+
+    <div class="row g-3 ">
+      <div class="col-lg-4 ">
+        <div class="bg-dark rounded-4 p-3">
+          <div class="weather-head today d-flex justify-content-between p-2 rounded-2">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="location fs-5 text-capitalize py-2 "></div>
+          <div class="degree  fw-bold"><sup>o</sup>C</div>
+          <div class="weather-icon">
+            <img src="./images/143.png" alt="icon descriptive the weather">
+          </div>
+          <div class="weather-desc text-main mt-0 mb-4">Mist</div>
+          <div class="weather-info mt-4 pt-3">
+            <span class="me-3"><img src="./images/icon-umberella.png" class="me-1" alt="rainning"> <span>20%</span> </span>
+            <span class="me-3"><img src="./images/icon-wind.png" class="me-1" alt="wind speed"> <span>18km/h</span> </span>
+            <span class="me-3"><img src="./images/icon-compass.png" class="me-1" alt="compass"> <span>East </span></span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 ">
+        <div class="next-days bg-dark rounded-4 p-3 text-center">
+          <div class="weather-head d-flex p-2 rounded-2">
+            <span class="mx-auto">Tuesday</span>            
+          </div>
+          <div class="weather-icon my-3">
+            <img src="./images/113.png" alt="icon descriptive the weather">
+          </div>
+          <div class="max-degree text-white fs-2 ">22<sup>o</sup>C</div>
+          <div class="min-degree  ">11<sup>o</sup>C</div>
+          <div class="weather-desc text-main my-5 pb-3">Mist</div>
+          
+
+        </div>
+      </div>
+      
+      
+
+      <div class="col-lg-4 ">
+        <div class="next-days bg-dark rounded-4 p-3 text-center">
+          <div class="weather-head d-flex p-2 rounded-2">
+            <span class="mx-auto">Tuesday</span>            
+          </div>
+          <div class="weather-icon my-3">
+            <img src="./images/113.png" alt="icon descriptive the weather">
+          </div>
+          <div class="max-degree text-white fs-2 ">22<sup>o</sup>C</div>
+          <div class="min-degree  ">11<sup>o</sup>C</div>
+          <div class="weather-desc text-main my-5 pb-3">Mist</div>
+          
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  
+</section>
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
