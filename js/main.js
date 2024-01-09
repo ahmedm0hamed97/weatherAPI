@@ -71,9 +71,10 @@ searchInput.addEventListener("keyup", function () {
 });
 
 function displayWeather() {
+  
   let date = new Date();
   locationName.innerHTML = responseData.location.name;
-  todayName.innerHTML = ` ${days[date.getDate()]}`;
+  todayName.innerHTML = `${days[date.getDay()]}`;
   monthName.innerHTML = `${date.getDate()} ${months[date.getMonth()]}`;
   weatherDegree.innerHTML = `${responseData.current.temp_c}<sup>o</sup>C`;
   weatherIcon.setAttribute(
@@ -87,14 +88,15 @@ function displayWeather() {
 
   // console.log(responseData.forecast.forecastday.length);
   let nextdayList = responseData.forecast.forecastday;
-
-  for (let i = 0; i < nextdayList.length; i++) {
-    nextdayName[i].innerHTML = days[new Date(nextdayList[i + 1].date).getDay()];
-    // console.log(days[new Date(nextdayList[i].date).getDay()]);
-    // nextdayIcon[i].setAttribute('src' , `https:${nextdayList[i].day.condition.icon}`)
-    nextdayIcon[i].setAttribute(
-      "src",
-      `https:${nextdayList[i + 1].day.condition.icon}`
+  
+    for (let i = 0; i < nextdayList.length; i++) {
+ 
+      nextdayName[i].innerHTML = days[new Date(nextdayList[i + 1].date).getDay()];
+      // console.log(days[new Date(nextdayList[i].date).getDay()]);
+      // nextdayIcon[i].setAttribute('src' , `https:${nextdayList[i].day.condition.icon}`)
+      nextdayIcon[i].setAttribute(
+        "src",
+        `https:${nextdayList[i + 1].day.condition.icon}`
     );
     // console.log(responseData.forecast.forecastday[i+1].day.condition.icon);
     maxDegree[i].innerHTML = `${nextdayList[i + 1].day.maxtemp_c}<sup>o</sup>C`;
